@@ -27,7 +27,6 @@ namespace Rocky.Controllers
         //POST - CREATE
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public IActionResult Create(Category obj) {
             if (ModelState.IsValid) {//this define if rules you write in category model is applied 
                 _db.Category.Add(obj);
@@ -37,6 +36,7 @@ namespace Rocky.Controllers
             return View(obj);
         }
 
+        //GET - Edit
         public IActionResult Edit(int? id) {
             if (id==null || id==0) {
                 return NotFound();
@@ -46,6 +46,19 @@ namespace Rocky.Controllers
                 return NotFound();
             }
 
+            return View(obj);
+        }
+
+        //POST - CREATE
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Category obj){
+            if (ModelState.IsValid)
+            {//this define if rules you write in category model is applied 
+                _db.Category.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
             return View(obj);
         }
     }
