@@ -437,3 +437,5 @@ C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\Category\Edit.cshtml.g.cs
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\Category\Delete.cshtml.g.cs
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\ApplicationType\Delete.cshtml.g.cs
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\ApplicationType\Edit.cshtml.g.cs
+C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
+C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\Product\Upsert.cshtml.g.cs

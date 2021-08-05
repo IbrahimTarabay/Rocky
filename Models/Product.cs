@@ -11,11 +11,11 @@ namespace Rocky.Models
 
       [Key]
       public int Id { get; set; }
-      public int Name { get; set; }
-      public int Description { get; set; }
+      public string Name { get; set; }
+      public string Description { get; set; }
       [Range(1, int.MaxValue)]
-      public int Price { get; set; }
-      public int Image { get; set; }
+      public double Price { get; set; }
+      public string Image { get; set; }
       [Display(Name = "Category Type")]
       public int CategoryId { get; set; }
       [ForeignKey("CategoryId")]

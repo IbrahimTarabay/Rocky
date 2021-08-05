@@ -49,7 +49,7 @@ namespace Rocky.Controllers
             return View(obj);
         }
 
-        //POST - CREATE
+        //POST - Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Category obj){

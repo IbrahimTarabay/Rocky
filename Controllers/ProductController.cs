@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,43 +25,39 @@ namespace Rocky.Controllers
             return View(objList);
         }
 
-        //GET - CREATE
-        public IActionResult Create(){   
-            return View();
+        //GET - Upsert
+        public IActionResult Upsert(int? id){
+
+            //so we are retrieving all of the categories from the database,
+            //but we are converting them to a SelectListItem so that we can have enumerable object and can display them in a dropdown
+            IEnumerable<SelectListItem> CategoryDropDown = _db.Category.Select(i => new SelectListItem
+            {
+                Text = i.Name,
+                Value = i.Id.ToString()
+            });
+
+            ViewBag.CategoryDropDown = CategoryDropDown;
+
+            Product product = new Product();
+            if (id == null)
+            {
+                //This is for create
+                return View(product);
+            }else {
+                product = _db.Product.Find(id);
+                if (product == null) {
+                    return NotFound();
+                }
+                return View(product);
+            }
         }
 
-        //POST - CREATE
+        //POST - Upsert-->to update or insert product
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Create(Category obj) {
+        public IActionResult Upsert(Category obj) {
             if (ModelState.IsValid) {//this define if rules you write in category model is applied 
                 _db.Category.Add(obj);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(obj);
-        }
-
-        //GET - Edit
-        public IActionResult Edit(int? id) {
-            if (id==null || id==0) {
-                return NotFound();
-            }
-            var obj = _db.Category.Find(id);//Find() work only with primary key
-            if (obj==null) {
-                return NotFound();
-            }
-
-            return View(obj);
-        }
-
-        //POST - CREATE
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(Category obj){
-            if (ModelState.IsValid)
-            {//this define if rules you write in category model is applied 
-                _db.Category.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
