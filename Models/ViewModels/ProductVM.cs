@@ -8,6 +8,8 @@ namespace Rocky.Models.ViewModels
 {
     public class ProductVM{
       public Product Product { get; set; }
+
+      //IEnumerable can be used with a for-each statement
       public IEnumerable<SelectListItem> CategorySelectList { get; set; }
       public IEnumerable<SelectListItem> ApplicationTypeSelectList { get; set; }
     }
