@@ -23,5 +23,10 @@ namespace Rocky.Models
       //EF automatically adds a mapping between product and category
       //it will also create a category id column which will be the foreign key relation between both tables
 
+        [Display(Name = "Application Type")]
+        public int ApplicationTypeId { get; set; }
+        [ForeignKey("ApplicationTypeId")]
+        public virtual ApplicationType ApplicationType { get; set; }
+
     }
 }
