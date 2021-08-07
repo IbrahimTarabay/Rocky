@@ -12,7 +12,8 @@
    <br />
    <div class="row">
      @foreach (var prod in Model.Products) { 
-       //display all products
+         <partial name="_IndividualProductCard" model="prod" />
+         //display all products
      }
    </div>
 </div>
