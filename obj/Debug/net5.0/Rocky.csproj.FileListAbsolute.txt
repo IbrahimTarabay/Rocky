@@ -23,8 +23,6 @@ C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Components.Web.d
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.AspNetCore.CookiePolicy.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cors.dll
-C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -103,14 +101,11 @@ C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.Heal
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.Diagnostics.HealthChecks.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Abstractions.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Composite.dll
-C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Embedded.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.FileProviders.Physical.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.Hosting.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.Http.dll
-C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Core.dll
-C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.Identity.Stores.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.Localization.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\refs\Microsoft.Extensions.Logging.Abstractions.dll
@@ -442,3 +437,12 @@ C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.genruntimeconfig.cache
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.csprojAssemblyReference.cache
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\Shared\_IndividualProductCard.cshtml.g.cs
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky.StaticWebAssets.xml
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
