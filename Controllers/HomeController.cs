@@ -9,6 +9,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Rocky.Data;
 using Rocky.Models.ViewModels;
+using System.Globalization;
 
 namespace Rocky.Controllers
 {
@@ -39,9 +40,11 @@ namespace Rocky.Controllers
             {
               Product = _db.Product.Include(u => u.Category).Include(u => u.ApplicationType)
               .Where(u => u.Id == id).FirstOrDefault(),
-                ExistsInCart = false
+              ExistsInCart = false,
+              myNumberFormatInfo = new CultureInfo("en-US", false).NumberFormat
 
             };
+            
             return View(DetailsVM);
         }
 

@@ -441,3 +441,4 @@ C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.pdb
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.genruntimeconfig.cache
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.csprojAssemblyReference.cache
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\Shared\_IndividualProductCard.cshtml.g.cs
+C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace Rocky.Models.ViewModels
 {
@@ -12,5 +13,6 @@ namespace Rocky.Models.ViewModels
 
         public Product Product { get; set; }
         public bool ExistsInCart { get; set; }
+        public NumberFormatInfo myNumberFormatInfo { get; set; }
     }
 }
