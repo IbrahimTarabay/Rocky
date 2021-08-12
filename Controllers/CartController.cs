@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,8 @@ using Rocky.Models;
 using Rocky.Utility;
 
 namespace Rocky.Controllers
-{
+{   
+    [Authorize]//admin or customer not important, give them access.
     public class CartController : Controller
     {
         private readonly ApplicationDbContext _db;
