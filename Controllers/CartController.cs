@@ -9,6 +9,10 @@ using Rocky.Models;
 using Rocky.Utility;
 using System.Security.Claims;
 using Rocky.Models.ViewModels;
+using Microsoft.AspNetCore.Hosting;
+using System.IO;
+using System.Text;
+using Microsoft.AspNetCore.Identity.UI.Services;
 
 namespace Rocky.Controllers
 {   
@@ -16,11 +20,15 @@ namespace Rocky.Controllers
     public class CartController : Controller
     {
         private readonly ApplicationDbContext _db;
+        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IEmailSender _emailSender;
         [BindProperty]
         public ProductUserVM ProductUserVM { get; set; }
 
-        public CartController(ApplicationDbContext db) {
+        public CartController(ApplicationDbContext db, IWebHostEnvironment webHostEnvironment,IEmailSender emailSender) {
             _db = db;
+            _webHostEnvironment = webHostEnvironment;
+            _emailSender = emailSender;
         }
         public IActionResult Index()
         {
@@ -73,8 +81,35 @@ namespace Rocky.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ActionName("Summary")]
-        public IActionResult SummaryPost(ProductUserVM ProductUserVM)//you can put no parameter since it's already binded above
+        public async Task<IActionResult> SummaryPost(ProductUserVM ProductUserVM)//you can put no parameter since it's already binded above
         {
+            var PathToTemplate = _webHostEnvironment.WebRootPath + Path.DirectorySeparatorChar.ToString()
+                + "templates" + Path.DirectorySeparatorChar.ToString() + "Inquiry.html";
+
+            var subject = "New Inquiry";
+            string HtmlBody = "";
+            using (StreamReader sr = System.IO.File.OpenText(PathToTemplate)) {
+                HtmlBody = sr.ReadToEnd();
+            }
+            //Name: {0}
+            //Email: {1}
+            //Phone: {2}
+            //Products: {3}
+
+            //we use StringBuilder because we want product list shown as html
+            StringBuilder productListSB = new StringBuilder();
+            foreach (var prod in ProductUserVM.ProductList) {
+                productListSB.Append($" - Name: {prod.Name} <span style='font-size:14px;'>(ID: {prod.Id})</span><br />");
+            }
+
+            string messageBody = string.Format(HtmlBody,
+                ProductUserVM.ApplicationUser.FullName,
+                ProductUserVM.ApplicationUser.Email,
+                ProductUserVM.ApplicationUser.PhoneNumber,
+                productListSB.ToString()
+                );
+
+            await _emailSender.SendEmailAsync(WC.EmailAdmin, subject,messageBody);
             return RedirectToAction(nameof(InquiryConfirmation));
         }
 

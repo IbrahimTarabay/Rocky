@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\product\" />
-    <Folder Include="wwwroot\templates\" />
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">

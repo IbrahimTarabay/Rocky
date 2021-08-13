@@ -38,7 +38,7 @@ namespace Rocky.Utility
       {
        "From",
        new JObject {
-        {"Email", "ibrahimmohamedsalah@protonmail.com"},
+        {"Email", "ibrahimesalah69@gmail.com"},
         {"Name", "Ibrahim"}
        }
       }, {
