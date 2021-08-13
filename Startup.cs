@@ -12,8 +12,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Rocky.Data;
-
-
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Rocky.Utility;
 
 namespace Rocky
 {
@@ -35,6 +35,7 @@ namespace Rocky
             .AddDefaultTokenProviders().AddDefaultUI()
             .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddHttpContextAccessor();
             services.AddSession(Options =>
