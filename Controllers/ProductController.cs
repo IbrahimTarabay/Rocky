@@ -11,10 +11,11 @@ using System.Threading.Tasks;
 using Rocky.Data;
 using Rocky.Models;
 using Rocky.Models.ViewModels;
-
+using Microsoft.AspNetCore.Authorization;
 
 namespace Rocky.Controllers
 {
+    [Authorize(Roles = WC.AdminRole)]
     public class ProductController : Controller{
         private readonly ApplicationDbContext _db;
         private readonly IWebHostEnvironment _webHostEnvironment;
