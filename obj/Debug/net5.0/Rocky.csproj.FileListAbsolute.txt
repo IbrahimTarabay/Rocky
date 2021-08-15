@@ -398,7 +398,6 @@ C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.GeneratedMSBuildEditorConfig.editorc
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.AssemblyInfoInputs.cache
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.AssemblyInfo.cs
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.csproj.CoreCompileInputs.cache
-C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.MvcApplicationPartsAssemblyInfo.cs
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.MvcApplicationPartsAssemblyInfo.cache
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.RazorAssemblyInfo.cache
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.RazorAssemblyInfo.cs
@@ -497,3 +496,5 @@ C:\repos\Rocky\Rocky\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_Models.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_Models.pdb
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_DataAccess.dll
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_DataAccess.pdb

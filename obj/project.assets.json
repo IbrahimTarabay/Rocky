@@ -3244,6 +3244,22 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Rocky_DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.9",
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.9",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.9",
+          "Rocky_Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Rocky_DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Rocky_DataAccess.dll": {}
+        }
+      },
       "Rocky_Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -10114,6 +10130,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Rocky_DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../Rocky_DataAccess/Rocky_DataAccess.csproj",
+      "msbuildProject": "../Rocky_DataAccess/Rocky_DataAccess.csproj"
+    },
     "Rocky_Models/1.0.0": {
       "type": "project",
       "path": "../Rocky_Models/Rocky_Models.csproj",
@@ -10135,6 +10156,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.9",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 5.0.2",
+      "Rocky_DataAccess >= 1.0.0",
       "Rocky_Models >= 1.0.0",
       "Rocky_Utility >= 1.0.0"
     ]
@@ -10166,6 +10188,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\repos\\Rocky\\Rocky_DataAccess\\Rocky_DataAccess.csproj": {
+              "projectPath": "C:\\repos\\Rocky\\Rocky_DataAccess\\Rocky_DataAccess.csproj"
+            },
             "C:\\repos\\Rocky\\Rocky_Models\\Rocky_Models.csproj": {
               "projectPath": "C:\\repos\\Rocky\\Rocky_Models\\Rocky_Models.csproj"
             },
