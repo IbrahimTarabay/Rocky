@@ -1,6 +1,7 @@
 ﻿@model Rocky.Models.Product
 
 @using System.Globalization;
+@using Rocky_Utility
 @{NumberFormatInfo myNumberFormatInfo = new CultureInfo("en-US", false).NumberFormat; }
 
 <div class="col-lg-4 col-md-6 pb-4 filter @Model.Category.Name.Replace(' ','_')">
