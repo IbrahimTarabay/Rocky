@@ -493,3 +493,7 @@ C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\Cart\Summary.cshtml.g.cs
 C:\repos\Rocky\Rocky\obj\Debug\net5.0\Razor\Views\Cart\InquiryConfirmation.cshtml.g.cs
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_Utility.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_Utility.pdb
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_Models.dll
+C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_Models.pdb

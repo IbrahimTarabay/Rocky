@@ -9,8 +9,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Globalization;
 using Rocky.Data;
-using Rocky.Models;
-using Rocky.Models.ViewModels;
+using Rocky_Models;
+using Rocky_Models.ViewModels;
 using Rocky_Utility;
 
 namespace Rocky.Controllers

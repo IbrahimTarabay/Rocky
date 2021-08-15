@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Rocky.Data;
-using Rocky.Models;
+using Rocky_Models;
 using Rocky_Utility;
 using Microsoft.AspNetCore.Authorization;
 
