@@ -498,3 +498,4 @@ C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_Models.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_Models.pdb
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_DataAccess.dll
 C:\repos\Rocky\Rocky\bin\Debug\net5.0\Rocky_DataAccess.pdb
+C:\repos\Rocky\Rocky\obj\Debug\net5.0\Rocky.MvcApplicationPartsAssemblyInfo.cs

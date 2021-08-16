@@ -14,6 +14,8 @@ using System.Threading.Tasks;
 using Rocky_DataAccess;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Rocky_Utility;
+using Rocky_DataAccess.Repository;
+using Rocky_DataAccess.Repository.IRepository;
 
 namespace Rocky
 {
@@ -44,6 +46,8 @@ namespace Rocky
                 Options.Cookie.HttpOnly = true;
                 Options.Cookie.IsEssential = true;
             });
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+
             services.AddControllersWithViews();
         }
 
