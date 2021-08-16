@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Rocky_DataAccess.Repository.IRepository
 {
-    interface IRepository<T> where T : class
+   public interface IRepository<T> where T : class
     {
         T Find(int id);
 
