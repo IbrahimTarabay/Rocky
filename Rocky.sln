@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocky", "Rocky\Rocky.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocky_Utility", "Rocky_Utility\Rocky_Utility.csproj", "{2C5D498B-C94A-4F38-B913-8B8E72164BC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocky_Models", "Rocky_Models\Rocky_Models.csproj", "{2071A559-BEFF-423F-B3A8-88DBBA5C94D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocky_Models", "Rocky_Models\Rocky_Models.csproj", "{2071A559-BEFF-423F-B3A8-88DBBA5C94D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rocky_DataAccess", "Rocky_DataAccess\Rocky_DataAccess.csproj", "{A6DB37E6-B646-4F5D-BEE6-8EC64F3D8290}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rocky_DataAccess", "Rocky_DataAccess\Rocky_DataAccess.csproj", "{A6DB37E6-B646-4F5D-BEE6-8EC64F3D8290}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
