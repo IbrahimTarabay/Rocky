@@ -3248,10 +3248,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.9",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.9",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.9",
-          "Rocky_Models": "1.0.0"
+          "Rocky_Models": "1.0.0",
+          "Rocky_Utility": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Rocky_DataAccess.dll": {}

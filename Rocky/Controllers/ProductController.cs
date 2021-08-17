@@ -13,20 +13,21 @@ using Rocky_Models;
 using Rocky_Models.ViewModels;
 using Rocky_Utility;
 using Microsoft.AspNetCore.Authorization;
+using Rocky_DataAccess.Repository.IRepository;
 
 namespace Rocky.Controllers
 {
     [Authorize(Roles = WC.AdminRole)]
     public class ProductController : Controller{
-        private readonly ApplicationDbContext _db;
+        private readonly IProductRepository _prodRepo;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProductController(ApplicationDbContext db, IWebHostEnvironment webHostEnvironment) {
-            _db = db;
+        public ProductController(IProductRepository prodRepo, IWebHostEnvironment webHostEnvironment) {
+            _prodRepo = prodRepo;
             _webHostEnvironment = webHostEnvironment;
         }
         public IActionResult Index(){
-            IEnumerable<Product> objList = _db.Product.Include(u => u.Category).Include(u=>u.ApplicationType); ;
+            IEnumerable<Product> objList = _prodRepo.GetAll(includeProperties: "Category,ApplicationType");
 
             /*foreach (var obj in objList) {
                 obj.Category = _db.Category.FirstOrDefault(u => u.Id == obj.CategoryId);
@@ -56,18 +57,8 @@ namespace Rocky.Controllers
             ProductVM productVM = new ProductVM()
             {
                 Product = new Product(),
-                CategorySelectList = _db.Category.Select(i => new SelectListItem
-                {
-                    Text = i.Name,
-                    Value = i.Id.ToString()
-
-                }),
-                ApplicationTypeSelectList = _db.ApplicationType.Select(i => new SelectListItem
-                {
-                    Text = i.Name,
-                    Value = i.Id.ToString()
-
-                })
+                CategorySelectList = 
+                ApplicationTypeSelectList =
             };
 
             if (id == null)

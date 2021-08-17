@@ -133,6 +133,9 @@
             "projectReferences": {
               "C:\\repos\\Rocky\\Rocky_Models\\Rocky_Models.csproj": {
                 "projectPath": "C:\\repos\\Rocky\\Rocky_Models\\Rocky_Models.csproj"
+              },
+              "C:\\repos\\Rocky\\Rocky_Utility\\Rocky_Utility.csproj": {
+                "projectPath": "C:\\repos\\Rocky\\Rocky_Utility\\Rocky_Utility.csproj"
               }
             }
           }
@@ -146,20 +149,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.9, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[5.0.9, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.9, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -170,11 +159,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
         }
       }
