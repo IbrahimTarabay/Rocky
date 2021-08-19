@@ -9,12 +9,12 @@ using Rocky_Utility;
 using Microsoft.AspNetCore.Authorization;
 using Rocky_DataAccess.Repository.IRepository;
 
+
 namespace Rocky.Controllers
 {
     [Authorize(Roles = WC.AdminRole)]
     public class CategoryController : Controller{
         private readonly ICategoryRepository _catRepo;
-
         public CategoryController(ICategoryRepository catRepo) {
             _catRepo = catRepo;
         }
