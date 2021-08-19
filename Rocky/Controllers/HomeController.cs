@@ -52,7 +52,7 @@ namespace Rocky.Controllers
 
             DetailsVM DetailsVM = new DetailsVM()
             {
-              Product = (Product)_prodRepo.GetAll(u => u.Id == id, includeProperties: "Category,ApplicationType"),
+              Product = _prodRepo.FirstOrDefault(u => u.Id == id, includeProperties: "Category,ApplicationType"),
               ExistsInCart = false,
               myNumberFormatInfo = new CultureInfo("en-US", false).NumberFormat
 
