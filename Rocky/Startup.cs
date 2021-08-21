@@ -40,6 +40,17 @@ namespace Rocky
 
             services.AddTransient<IEmailSender, EmailSender>();
 
+            services.AddAuthorization(options =>
+            {
+
+                options.AddPolicy("Admin",
+                    authBuilder =>
+                    {
+                        authBuilder.RequireRole("Administrators");
+                    });
+
+            });
+
             services.AddDistributedMemoryCache();
             services.AddHttpContextAccessor();
             services.AddSession(Options =>
