@@ -63,6 +63,7 @@ namespace Rocky.Controllers
             {//this define if rules you write in category model is applied 
                 _catRepo.Update(obj);
                 _catRepo.Save();
+                TempData[WC.Success] = "Action completed successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -91,6 +92,7 @@ namespace Rocky.Controllers
             if (obj==null) {
                 return NotFound();
             }
+            TempData[WC.Success] = "Action completed successfully";
              _catRepo.Remove(obj);
              _catRepo.Save();
              return RedirectToAction("Index");
