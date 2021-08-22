@@ -12,7 +12,7 @@ using Rocky_Utility;
 
 namespace Rocky.Controllers
 {
-    //[Authorize(WC.AdminRole)]
+    [Authorize(Roles = WC.AdminRole)]
 
     public class InquiryController : Controller
     {

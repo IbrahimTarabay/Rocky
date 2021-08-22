@@ -35,8 +35,10 @@ namespace Rocky.Controllers
             if (ModelState.IsValid) {//this define if rules you write in category model is applied 
                 _catRepo.Add(obj);
                 _catRepo.Save();
+                TempData[WC.Success] = "Category Created Successfully";
                 return RedirectToAction("Index");
             }
+            TempData[WC.Error] = "Error while creating category";
             return View(obj);
         }
 
