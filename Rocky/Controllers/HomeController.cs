@@ -68,7 +68,7 @@ namespace Rocky.Controllers
         }
 
         [HttpPost,ActionName("Details")]
-        public IActionResult DetailsPost(int id)
+        public IActionResult DetailsPost(int id, DetailsVM detailsVM)//we explicitly add DetailsVM because we didn't define it globaly or use bind property
         {
             List<ShoppingCart> shoppingCartList = new List<ShoppingCart>();
 
@@ -79,7 +79,7 @@ namespace Rocky.Controllers
                 shoppingCartList = HttpContext.Session.Get<List<ShoppingCart>>(WC.SessionCart);
             }
 
-            shoppingCartList.Add(new ShoppingCart { ProductId = id });
+            shoppingCartList.Add(new ShoppingCart { ProductId = id, SqFt = detailsVM.Product.TempSqFt });
             HttpContext.Session.Set(WC.SessionCart, shoppingCartList);
             TempData[WC.Success] = "Item add to cart successfully";
             return RedirectToAction(nameof(Index));//magic strings
