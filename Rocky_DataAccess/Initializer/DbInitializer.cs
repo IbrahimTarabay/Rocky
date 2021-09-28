@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Rocky_Models;
+using Rocky_Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Rocky_DataAccess.Initializer
 {
     public class DbInitializer : IDbInitializer
@@ -12,7 +14,6 @@ namespace Rocky_DataAccess.Initializer
         private readonly ApplicationDbContext _db;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-
         public DbInitializer(ApplicationDbContext db, UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _db = db;
@@ -22,7 +23,42 @@ namespace Rocky_DataAccess.Initializer
 
         public void Initialize()
         {
-            throw new NotImplementedException();
+            try
+            {
+                if (_db.Database.GetPendingMigrations().Count() > 0)
+                {
+                    _db.Database.Migrate();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+
+
+            if (!_roleManager.RoleExistsAsync(WC.AdminRole).GetAwaiter().GetResult())
+            {
+                _roleManager.CreateAsync(new IdentityRole(WC.AdminRole)).GetAwaiter().GetResult();
+                _roleManager.CreateAsync(new IdentityRole(WC.CustomerRole)).GetAwaiter().GetResult();
+            }
+            else
+            {
+                return;
+            }
+
+            _userManager.CreateAsync(new ApplicationUser
+            {
+                UserName = "admin",
+                Email = "admin@admin.com",
+                EmailConfirmed = true,
+                FullName = "Admin Tester",
+                PhoneNumber = "111111111111"
+            }, "Admin123*").GetAwaiter().GetResult();
+
+            ApplicationUser user = _db.ApplicationUser.FirstOrDefault(u => u.Email == "admin@admin.com");
+            _userManager.AddToRoleAsync(user, WC.AdminRole).GetAwaiter().GetResult();
+
+
         }
     }
 }
